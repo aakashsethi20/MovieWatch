@@ -11,6 +11,7 @@ class ReviewAdmin(admin.ModelAdmin):
 class MovieAdmin(admin.ModelAdmin):
     model = Movie
     list_display = ('name',)
+    list_filer = ['name']
     search_fields = ['name']
 
 admin.site.register(Movie, MovieAdmin)
