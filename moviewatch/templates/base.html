@@ -1,10 +1,16 @@
-<div>
-    <nav>
-        <div>
-            <a href="{% url 'reviews:movie_list' %}">MovieWatch</a>
+{% load bootstrap4 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block bootstrap4_content %}
+<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'reviews:movie_list' %}">MovieWatch</a>
         </div>
-        <div id="navbar">
-            <ul>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
                 <li><a href="{% url 'reviews:movie_list' %}">Home</a></li>
                 <li><a href="{% url 'reviews:review_list' %}">Latest Reviews</a></li>
             </ul>
@@ -13,5 +19,9 @@
 
     <h1>{% block title %}(no title){% endblock %}</h1>
 
+    {% bootstrap_messages %}
+
     {% block content %}(no content){% endblock %}
 </div>
+
+{% endblock %}

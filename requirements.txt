@@ -4,6 +4,7 @@ bleach==2.1.4
 cycler==0.10.0
 decorator==4.3.0
 Django==2.1.1
+django-bootstrap4==0.0.7
 entrypoints==0.2.3
 html5lib==1.0.1
 ipykernel==4.9.0

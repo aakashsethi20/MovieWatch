@@ -6,9 +6,9 @@
 
 {% block content %}
 {% if movie_list %}
-<div>
+<div class="row">
     {% for movie in movie_list %}
-    <div>
+    <div class="col-xs-6 col-lg-4">
         <h4><a href="{% url 'reviews:movie_detail' movie.id %}">
             {{ movie.name }}
         </a></h4>
