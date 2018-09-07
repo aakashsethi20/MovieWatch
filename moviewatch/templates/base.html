@@ -1,0 +1,17 @@
+<div>
+    <nav>
+        <div>
+            <a href="{% url 'reviews:movie_list' %}">MovieWatch</a>
+        </div>
+        <div id="navbar">
+            <ul>
+                <li><a href="{% url 'reviews:movie_list' %}">Home</a></li>
+                <li><a href="{% url 'reviews:review_list' %}">Latest Reviews</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>{% block title %}(no title){% endblock %}</h1>
+
+    {% block content %}(no content){% endblock %}
+</div>

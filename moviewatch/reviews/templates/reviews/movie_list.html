@@ -1,5 +1,10 @@
-<h2>Movies</h2>
+{% extends 'base.html' %}
 
+{% block title %}
+<h2>Movies</h2>
+{% endblock %}
+
+{% block content %}
 {% if movie_list %}
 <div>
     {% for movie in movie_list %}
@@ -15,3 +20,4 @@
 {% else %}
 <p>No movies are available.</p>
 {% endif %}
+{% endblock %}

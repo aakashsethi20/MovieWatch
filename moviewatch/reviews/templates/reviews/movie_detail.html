@@ -1,6 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
 <h2>{{ movie.name }}</h2>
 <h5>{{ movie.review_set.count }} reviews ({{ movie.average_rating | floatformat }} average rating)</h5>
+{% endblock %}
 
+{% block content %}
 <h3>Recent reviews</h3>
 
 {% if movie.review_set.all %}
@@ -27,3 +32,4 @@
     {{ form.as_p }}
     <input type="submit" value="Add" />
 </form>
+{% endblock %}
