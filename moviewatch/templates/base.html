@@ -1,18 +1,20 @@
 {% load bootstrap4 %}
 
 {% bootstrap_css %}
-{% bootstrap_javascript %}
+{% bootstrap_javascript jquery='full' %}
 
 {% block bootstrap4_content %}
-<div class="container">
-    <nav class="navbar navbar-default">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="{% url 'reviews:movie_list' %}">MovieWatch</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="{% url 'reviews:movie_list' %}">Home</a></li>
-                <li><a href="{% url 'reviews:review_list' %}">Latest Reviews</a></li>
+<div>
+    <nav class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand logo" href="{% url 'reviews:movie_list' %}">MovieWatch</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseList" aria-controls="navbarCollapseList"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarCollapseList" class="navbar-collapse collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="{% url 'reviews:movie_list' %}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'reviews:review_list' %}">Latest Reviews</a></li>
             </ul>
         </div>
     </nav>
